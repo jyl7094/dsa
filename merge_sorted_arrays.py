@@ -15,7 +15,7 @@ def merge_sorted_arrays(a, b):
             lst.append(a[i])
             i += 1
     
-    return lst+a[i:]+b[j:] # O(n)
+    return lst+a[i:]+b[j:] # O(n + k)
 
 
 # assert merge_sorted_arrays([0,3,4,31], [4,6,30]) == [0, 3, 4, 4, 6, 30, 31]
