@@ -1,21 +1,23 @@
 # merge sort
 # assuming both lists only contain ints and at least one is not empty
 def merge_sorted_arrays(a, b):
+    if not a or not b:
+        a += b  # O(n)
+        return a
+    
     lst = []
     i, j = 0, 0
 
-    if not a or not b:
-        return a+b # O(n)
-    
     while i < len(a) and j < len(b): # O(n)
-        if a[i] >= b[j]:
-            lst.append(b[j])
-            j += 1
-        else:
+        if a[i] <= b[j]:
             lst.append(a[i])
             i += 1
+        else:
+            lst.append(b[j])
+            j += 1
     
-    return lst+a[i:]+b[j:] # O(n + k)
+    lst += a[i:] + b[j:] # O(n)
+    return lst
 
 
 # assert merge_sorted_arrays([0,3,4,31], [4,6,30]) == [0, 3, 4, 4, 6, 30, 31]
