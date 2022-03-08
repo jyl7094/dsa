@@ -106,10 +106,6 @@ class BinarySearchTree:
                     while s.left:
                         sp = s
                         s = s.left
-                    
-                    # print(str(sp))
-                    # print(str(s))
-
                     if parent is None:
                         if sp is not None:
                             if s.right:
