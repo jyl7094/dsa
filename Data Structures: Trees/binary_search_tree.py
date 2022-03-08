@@ -116,10 +116,6 @@ class BinarySearchTree:
                         s.right = self.root.right
                         self.root = s
                     else:
-                        print(parent)
-                        print(curr)
-                        print(sp)
-                        print(s)
                         if sp is not None:
                             if s.right:
                                 sp.left = s.right
@@ -135,13 +131,3 @@ class BinarySearchTree:
                         else:
                             parent.right = s
                 return True
-
-bst = BinarySearchTree()
-bst.insert(2)
-bst.insert(1)
-bst.insert(6)
-bst.insert(4)
-bst.insert(3)
-bst.insert(5)
-bst.remove(4)
-print(bst)
