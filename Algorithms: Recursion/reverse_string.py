@@ -5,7 +5,6 @@ def reverse_string_recursive(s):
         return ''
     return s[-1] + reverse_string_recursive(s[:-1])
 
-
 def reverse_string_iterative(s):
     if type(s) != str:
         raise TypeError
