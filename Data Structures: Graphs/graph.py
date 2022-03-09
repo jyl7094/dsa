@@ -4,11 +4,11 @@ class Graph:
         self.adjacent_list = {}
     
     def add_vertex(self, v):
-        if v not in self.adjacent_list:
-            self.adjacent_list[v] = []
-        else:
-            return
+        if v in self.adjacent_list:
+            return False
+        self.adjacent_list[v] = []
         self.number_of_vertices += 1
+        return True
     
     def add_edge(self, v1, v2):
         if v1 not in self.adjacent_list or v2 not in self.adjacent_list:
