@@ -28,14 +28,3 @@ class Array:
         del self._data[self._length-1]
         self._length -= 1
         return item
-
-
-ary = Array()
-print(ary.push('hi'))
-print(ary.push('you'))
-print(ary.push('!'))
-print(ary.delete(0))
-print(ary.push('are'))
-print(ary.push('nice'))
-print(ary.delete(1))
-print(ary)

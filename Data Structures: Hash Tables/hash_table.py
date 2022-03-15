@@ -39,28 +39,3 @@ class HashTable:
             for elem in hash:
                 k.add(elem[0])
         return k
-
-
-
-my_hash_table = HashTable(10)
-my_hash_table.put(1, 'hi')
-my_hash_table.put(3, 'bye')
-my_hash_table.put(5, 'bye')
-print(my_hash_table.get(1))
-print(my_hash_table._data)
-print(my_hash_table.keys())
-"""
-class HashTable {
-  constructor(size){
-    this.data = new Array(size);
-  }
-
-  _hash(key) {
-    let hash = 0;
-    for (let i =0; i < key.length; i++){
-        hash = (hash + key.charCodeAt(i) * i) % this.data.length
-    }
-    return hash;
-  }
-}
-"""
