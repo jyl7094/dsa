@@ -1,6 +1,6 @@
 def fibonacci_iterative(n): # O(n)
     if n < 0:
-        return False
+        raise ValueError
     elif n < 2:
         return n
     else:
@@ -12,10 +12,8 @@ def fibonacci_iterative(n): # O(n)
 
 def fibonacci_recursive(n): # O(2^n)
     if n < 0: 
-        return False
+        raise ValueError
     elif n < 2: 
         return n
     else:
         return fibonacci_recursive(n-2) + fibonacci_recursive(n-1)
-
-print(fibonacci_recursive(2) == fibonacci_recursive(2))
